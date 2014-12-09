@@ -6,9 +6,10 @@ module.exports = function (app, nuts) {
     // normalize views path
     app.set( 'views', path.resolve( app.get( 'views' )));
 
+    var tmplFolder = app.get( 'templates folder') || './templates';
     var len = app.get('views').length+1;
 
-    nuts.addFolder('./templates', function (err) {
+    nuts.addFolder( tmplFolder, function (err) {
         if (err) { throw err;}
 
         nuts.addTree('./views', function (err) {

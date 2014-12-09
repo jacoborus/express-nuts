@@ -27,6 +27,9 @@ var expressNuts = require('express-nuts');
 // specify the views directory
 app.set('views', './views');
 
+// (optional) specify the regular templates directory
+app.set( 'templates folder', './myFolder' );
+
 // set nuts as template engine
 expressNuts( app, nuts );
 ```
